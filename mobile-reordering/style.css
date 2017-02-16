@@ -34,6 +34,7 @@ a:hover {
   display: none;
 }
 
+
 img {
   width:100%;
 }
@@ -64,13 +65,65 @@ section, footer {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+.flex-nav li.social {
+  flex: 1;
 }
 
 @media all and (max-width:1000px) {
 
+  .flex-nav ul {
+    flex-wrap:wrap;
+  }
+
+  .flex-nav li {
+    flex:1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex:1 1 25%;
+  }
+
 }
 
 
+/* This is where the magic Happens */
+
 @media all and (max-width:500px) {
-  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper > *{
+    order: 9999;
+  }
+  .flex-nav {
+    order: 1;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  footer {
+    order: 6;
+  }
+
+  .flex-nav li {
+    flex-basis:100%;
+  }
+
 }
