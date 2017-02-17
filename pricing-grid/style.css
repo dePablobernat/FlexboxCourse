@@ -58,5 +58,32 @@ a {
 .pricing-grid {
   max-width:750px;
   margin: 0 auto;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    flex-basis: 210px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background: rgba(255,255,255,.4);
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .plan {
+    flex-basis: 100%;
+    order: 9999;
+  }
+
+  .plan2 {
+    order: 1;
+  }
 }

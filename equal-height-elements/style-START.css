@@ -33,4 +33,17 @@ a {
 }
 
 /* Flexbox Starts Here: */
-
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 900px;
+  width: 900px;
+}
+.item {
+  align-content: center;
+  width: 31%;
+  border: solid 1px red;
+}
